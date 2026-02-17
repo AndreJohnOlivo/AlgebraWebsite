@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        :root{--primary:#0b61b1;--muted:#6b6b6b;--bg:#f4f6f8}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:#222}
+        .navbar{position:fixed;top:0;left:0;right:0;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;box-shadow:0 2px 8px rgba(20,20,20,0.06);z-index:1000}
+        .brand{font-weight:600;color:var(--primary);font-size:18px}
+        .nav{display:flex;gap:10px}
+        .nav a{color:#333;text-decoration:none;padding:8px 12px;border-radius:6px;font-size:15px}
+        .nav a.cta{background:var(--primary);color:#fff}
+        .nav a.muted{color:var(--muted)}
+        .container{max-width:1100px;margin:110px auto 48px;padding:0 20px}
+        .hero{display:flex;align-items:center;justify-content:space-between;gap:24px}
+        .hero-card{background:#fff;padding:36px;border-radius:10px;box-shadow:0 10px 30px rgba(15,15,15,0.06);flex:1}
+        .hero-card h1{margin:0 0 10px;font-size:28px}
+        .hero-card p{margin:0 0 20px;color:var(--muted)}
+        .actions{display:flex;gap:12px;flex-wrap:wrap}
+        .actions a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+        .actions a.primary{background:var(--primary);color:#fff}
+        .actions a.secondary{background:#eef3fb;color:var(--primary)}
+        .side{width:320px}
+        footer{max-width:1100px;margin:24px auto;padding:12px 20px;color:var(--muted);font-size:13px}
+        @media(max-width:880px){.hero{flex-direction:column}.side{width:100%}.container{margin-top:90px}}
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">Algebra Projekt</div>
+        <nav class="nav">
+            <a href="prelims.html" class="muted">Prelims</a>
+            <a href="midterms.html" class="muted">Midterms</a>
+            <a href="finals.html" class="muted">Finals</a>
+            <a href="studentprofile.html" class="muted">Student Profiles</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-card">
+                <h1>Welcome to the website</h1>
+                <p>Access Prelims, Midterms, Finals, and manage student profiles from the navigation above. Click any item to continue.</p>
+                <div class="actions">
+                    <a href="prelims.html" class="primary">Go to Prelims</a>
+                    <a href="midterms.html" class="secondary">Go to Midterms</a>
+                    <a href="finals.html" class="secondary">Go to Finals</a>
+                    <a href="studentprofile.html" class="secondary">Go to Student Profiles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> Algebra Website — All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
